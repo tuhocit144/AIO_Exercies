@@ -3,20 +3,14 @@ kernal = [[2, 4], [1, 3]]
 
 
 def getConvolutional(a, kernel):
-    # Get dimensions of input a and kernel
+
     rows_a = len(a)
     cols_a = len(a[0])
     rows_k = len(kernel)
     cols_k = len(kernel[0])
-
-    # Define result dimensions
     result_height = rows_a - rows_k + 1
     result_width = cols_a - rows_k + 1
-
-    # Initialize result a with zeros
     result = [[0 for _ in range(result_width)] for _ in range(result_height)]
-
-    # Perform convolution
     for i in range(result_height):
         for j in range(result_width):
             sum = 0
@@ -24,7 +18,6 @@ def getConvolutional(a, kernel):
                 for kj in range(cols_k):
                     sum += a[i + ki][j + kj] * kernel[ki][kj]
             result[i][j] = sum
-
     return result
 
 

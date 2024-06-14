@@ -1,5 +1,11 @@
-def sum(a,b):
+def sum(a, b):
     return (a+b)
-if __name__=="__main__":
+
+
+def test(a, b):
+    return a-b
+
+
+if __name__ == "__main__":
     print('Đinh Thị Tâm')
-    print('Total: ',sum(5,7))
+    print('Total: ', sum(5, 7))

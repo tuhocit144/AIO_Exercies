@@ -3,7 +3,6 @@ kernal = [[2, 4], [1, 3]]
 
 
 def getConvolutional(a, kernel):
-
     rows_a = len(a)
     cols_a = len(a[0])
     rows_k = len(kernel)

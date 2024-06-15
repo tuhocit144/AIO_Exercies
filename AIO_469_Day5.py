@@ -13,7 +13,6 @@ def getVocabul(data):
     aText = list(aSet)
     aText.sort()
     return aText
-
 # Lay so lan xuat hien cua cac tu trong data
 
 

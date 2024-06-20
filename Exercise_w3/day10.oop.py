@@ -24,8 +24,8 @@ class Staff:
 
 # test
 staff1 = Staff('An', 25, 'Q10_TPHCM', 30000000, 300)
-staff2 = Staff('Bình', 28, 'Q2_TPHCM', 50000000, 199)
-staff3 = Staff('Nga', 29, 'Q.Bình Thạnh', 10000000, 99)
+staff2 = Staff('Binh', 28, 'Q2_TPHCM', 50000000, 199)
+staff3 = Staff('Nga', 29, 'Q.3_TPHCM', 10000000, 99)
 # output
 staff1.show_info()
 staff2.show_info()

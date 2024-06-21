@@ -28,9 +28,8 @@ class SigmoidActivateFunction(nn.Module):
             a.append(round(1/(1+math.exp(-self.__x[idx])), 4))
         return a
 
-
     # test
 Relua = ReLUActivateFunction([1, -5, 1.5, 2.7, -5])
-print(Relua())
-Sigmod = SigmoidActivateFunction([1, -5, 1.5, 2.7, -5])
-print(Sigmod())
+print(f'Relua: {Relua()}')
+Sigmoid = SigmoidActivateFunction([1, -5, 1.5, 2.7, -5])
+print(f'Sigmoid: {Sigmoid()}')

@@ -9,6 +9,7 @@ class ReLUActivateFunction(nn.Module):
 
     def forward(self, x):
         zeros = torch.zeros_like(x)
+        print('zeros:',zeros)
         return torch.maximum(x, zeros)
 
 

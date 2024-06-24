@@ -37,24 +37,24 @@ def levenshtein_distance(token1, token2):
     return distances[len(token1)][len(token2)]
 
 
-def main():
-    st.title(" Word Correction using Levenshtein Distance ")
+def main(vocabs):
+    st.title("Word Correction using Levenshtein Distance")
     word = st.text_input('Word :')
-    if st.button(" Compute "):
+    if st.button("Compute"):
         # compute levenshtein distance
         leven_distances = dict()
         for vocab in vocabs:
             leven_distances[vocab] = levenshtein_distance(word, vocab)
             # sorted by distance
-            sorted_distences = dict(sorted(leven_distances.items(), key=lambda item:
-                                           item[1]))
-            correct_word = list(sorted_distences.keys())[0]
-            st.write('Correct word : ', correct_word)
-            col1, col2 = st.columns(2)
-            col1.write('Vocabulary :')
-            col1.write(vocabs)
-            col2.write('Distances :')
-            col2.write(sorted_distences)
+        sorted_distences = dict(sorted(leven_distances.items(), key=lambda item:
+                                       item[1]))
+        correct_word = list(sorted_distences.keys())[0]
+        st.write('Correct word : ', correct_word)
+        col1, col2 = st.columns(2)
+        col1.write('Vocabulary :')
+        col1.write(vocabs)
+        col2.write('Distances :')
+        col2.write(sorted_distences)
 
 
 if __name__ == '__main__()':
@@ -64,4 +64,4 @@ if __name__ == '__main__()':
     path_file = current_directory+'\\data\\vocab.txt'
     vocabs = load_vocab(path_file)
     # print(vocabs)
-    main()
+    main(vocabs)

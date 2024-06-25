@@ -62,7 +62,6 @@ def main(vocabs):
 
 
 if __name__ == '__main__':
-    st.write('Check streamlit')
     current_file_path = os.path.abspath(__file__)
     current_directory = os.path.dirname(current_file_path)
     path_file = current_directory+'\\data\\vocab.txt'
